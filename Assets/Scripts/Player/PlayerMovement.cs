@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
 
     Vector3 velocity;
 
+    [SerializeField] private float FuerzaSalto = 3;
     void Start()
     {
         
@@ -26,6 +27,8 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+
+        AplicarGravedad();
 
         isGrounded = Physics.CheckSphere(groundCheck.position, sphereRadius, groundMask);
 
@@ -40,8 +43,18 @@ public class PlayerMovement : MonoBehaviour
 
         Vector3 move = transform.right * x + transform.forward * z;
 
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        {
+            velocity.y = Mathf.Sqrt(FuerzaSalto * -2 * gravity);  
+        }
+
         characterController.Move(move * speed * Time.deltaTime);
 
+
+    }
+
+    private void AplicarGravedad()
+    {
         velocity.y += gravity * Time.deltaTime;
 
         characterController.Move(velocity * Time.deltaTime);
