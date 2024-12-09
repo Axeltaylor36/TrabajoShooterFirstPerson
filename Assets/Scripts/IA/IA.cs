@@ -28,7 +28,7 @@ public class IA: MonoBehaviour
     {
         navMeshAgent.destination = destinations[0].transform.position;
 
-        player = FindObjectOfType<NavMeshAgent>().gameObject;
+        player = FindObjectOfType<CharacterController>().gameObject;
     }
 
     void Update()

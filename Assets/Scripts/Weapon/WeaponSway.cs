@@ -26,9 +26,12 @@ public class WeaponSway : MonoBehaviour
         float mouseX = Input.GetAxis("Mouse X");
         float mouseY = Input.GetAxis("Mouse Y");
 
+
         Quaternion xAngle = Quaternion.AngleAxis(mouseX * -1.25f, Vector3.up);
 
+
         Quaternion yAngle = Quaternion.AngleAxis(mouseY * 1.25f, Vector3.left);
+
 
         Quaternion targetRotation = startRotation * xAngle * yAngle;
 
