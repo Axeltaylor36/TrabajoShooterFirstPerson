@@ -1823,6 +1823,25 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &841504272 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3652306742356895473, guid: 7b4fa33244236ab45bde1dd5223c1b4a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1406929537990684229}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &841504273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 841504272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5267c1c41537de4f84917b230a0041e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  swayAmount: 15
 --- !u!1 &881059755
 GameObject:
   m_ObjectHideFlags: 0
@@ -3817,6 +3836,11 @@ PrefabInstance:
       propertyPath: shootRate
       value: 0.225
       objectReference: {fileID: 0}
+    - target: {fileID: 3409679003027111755, guid: 7b4fa33244236ab45bde1dd5223c1b4a,
+        type: 3}
+      propertyPath: shootForce
+      value: 5000
+      objectReference: {fileID: 0}
     - target: {fileID: 3652306742356895473, guid: 7b4fa33244236ab45bde1dd5223c1b4a,
         type: 3}
       propertyPath: m_Name
@@ -3825,7 +3849,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3652306742356895473, guid: 7b4fa33244236ab45bde1dd5223c1b4a,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 841504273}
   m_SourcePrefab: {fileID: 100100000, guid: 7b4fa33244236ab45bde1dd5223c1b4a, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
