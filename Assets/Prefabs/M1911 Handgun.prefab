@@ -344,6 +344,7 @@ GameObject:
   - component: {fileID: 3335297016379700257}
   - component: {fileID: 445258157039282588}
   - component: {fileID: 3409679003027111755}
+  - component: {fileID: 2809799736982124526}
   m_Layer: 0
   m_Name: M1911 Handgun
   m_TagString: Untagged
@@ -359,7 +360,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3652306742356895473}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.000000021855694, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.634, y: -0.816, z: 0.87}
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_ConstrainProportionsScale: 0
@@ -435,9 +436,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnPoint: {fileID: 4022770530556959872}
   bullet: {fileID: 5273718711309858007, guid: b45d9856aa1ec754492d3d47a13eb582, type: 3}
-  shootForce: 1500
-  shootRate: 0.5
-  shootRateTime: 0
+  shootForce: 5000
+  shootRate: 0.225
+--- !u!114 &2809799736982124526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3652306742356895473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5267c1c41537de4f84917b230a0041e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  swayAmount: 15
 --- !u!1 &7335327825044473800
 GameObject:
   m_ObjectHideFlags: 0
