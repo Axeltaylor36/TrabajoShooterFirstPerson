@@ -1,9 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class GameManager : MonoBehaviour
 {
+    [SerializeField] private  Text ammoText;
+
     public static GameManager Instance {  get; private set; }
 
     public int gunAmmo = 10;
@@ -13,5 +17,9 @@ public class GameManager : MonoBehaviour
         Instance = this;
     }
 
+    private void Update()
+    {
+        ammoText.text = gunAmmo.ToString();
+    }
 
 }
