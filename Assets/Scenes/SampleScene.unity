@@ -2096,7 +2096,7 @@ MonoBehaviour:
   - {fileID: 2042687503}
   - {fileID: 889466670}
   distanceToFollowPath: 2
-  followPlayer: 0
+  followPlayer: 1
   distanceToFollowPlayer: 5
 --- !u!195 &881059758
 NavMeshAgent:
@@ -4177,7 +4177,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a02010d4e0959d4489a2213a0e166b0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ammoText: {fileID: 0}
+  TextAmmo: {fileID: 137191054}
   gunAmmo: 13
 --- !u!4 &1968924874
 Transform:
@@ -4388,6 +4388,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3409679003027111755, guid: 7b4fa33244236ab45bde1dd5223c1b4a,
+        type: 3}
+      propertyPath: shootForce
+      value: 2000
       objectReference: {fileID: 0}
     - target: {fileID: 3652306742356895473, guid: 7b4fa33244236ab45bde1dd5223c1b4a,
         type: 3}

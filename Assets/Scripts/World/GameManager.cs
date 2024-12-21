@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] private  Text ammoText;
+    [SerializeField] private TextMeshProUGUI TextAmmo;
 
     public static GameManager Instance {  get; private set; }
 
@@ -19,7 +21,7 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        ammoText.text = gunAmmo.ToString();
+        TextAmmo.text = gunAmmo.ToString();
     }
 
 }
