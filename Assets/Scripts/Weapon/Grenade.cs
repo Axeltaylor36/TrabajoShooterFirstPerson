@@ -33,7 +33,7 @@ public class Grenade : MonoBehaviour
             Explosive();
 
             exploded = true;
-            Debug.Log("BOOM!");
+          
             
         }
     }
