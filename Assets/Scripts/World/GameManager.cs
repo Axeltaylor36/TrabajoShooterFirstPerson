@@ -4,6 +4,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 
 public class GameManager : MonoBehaviour
@@ -14,7 +15,7 @@ public class GameManager : MonoBehaviour
 
     public int gunAmmo = 10;
 
-    public int health = 100;
+    public float health = 100;
 
     public TextMeshProUGUI healthText;
 
@@ -28,5 +29,24 @@ public class GameManager : MonoBehaviour
         TextAmmo.text = gunAmmo.ToString();
         healthText.text = health.ToString();
     }
+    public void LoseHealth(float healthToReduce) //Cuando llamemos a este método al script PlayerInteracions
+    {
+        health -= healthToReduce; //que es los mismo que health = health - healthToReduce
+        CheckHealth();
+    }
 
+    public void CheckHealth()
+    {
+
+        if (health <= 0)
+        {
+
+            Debug.Log("Has muerto");
+
+            //Cuando muramos reiniciamos el nivel. Entonces accedemos de neuvo a la escena que tenemos acticamente.
+            //¿Que es el buildIndex? Cuando le damos al build settigs aparece un numero en el numero de escenas que tengamos activas, y nos señala que escena tenemos activa
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+
+    }
 }
