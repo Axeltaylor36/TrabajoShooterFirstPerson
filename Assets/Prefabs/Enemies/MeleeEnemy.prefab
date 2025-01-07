@@ -446,7 +446,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4500323301399436041}
   m_Layer: 0
-  m_Name: EnemyMelee
+  m_Name: MeleeEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -938,6 +938,37 @@ Transform:
   - {fileID: 7734978191880072478}
   m_Father: {fileID: 993465014865238675}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5657677269345109714
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4296911453114067623}
+  m_Layer: 0
+  m_Name: EnemySpawnBulletPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4296911453114067623
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5657677269345109714}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.74, z: 0.32}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2507115389785059560}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5816558699529308893
 GameObject:
   m_ObjectHideFlags: 0
@@ -1014,6 +1045,7 @@ GameObject:
   - component: {fileID: 2291057705210412411}
   - component: {fileID: 5517935410479029815}
   - component: {fileID: 3722264602722298758}
+  - component: {fileID: 3755336308930648766}
   - component: {fileID: 2947769209472535668}
   m_Layer: 0
   m_Name: Enemy
@@ -1036,6 +1068,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2401269655375609975}
+  - {fileID: 4296911453114067623}
   m_Father: {fileID: 4500323301399436041}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &5504052504456601682
@@ -1133,6 +1166,22 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &3755336308930648766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6816677726058256459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bc755550e137884bb227215f6859e95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyBullet: {fileID: 5651520966266355798, guid: fd2370f52357c734cb748c5794fd0797,
+    type: 3}
+  spawnBulletPoint: {fileID: 4296911453114067623}
+  bulletVelocity: 100
 --- !u!114 &2947769209472535668
 MonoBehaviour:
   m_ObjectHideFlags: 0

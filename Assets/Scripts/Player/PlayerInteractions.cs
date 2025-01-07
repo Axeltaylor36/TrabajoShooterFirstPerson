@@ -6,6 +6,8 @@ public class PlayerInteractions : MonoBehaviour
 {
     float danhoCaida = 50;
 
+    float danhoEnemigo = 30;
+
     public Transform startPosition;
 
     private void OnTriggerEnter(Collider other)
@@ -27,6 +29,16 @@ public class PlayerInteractions : MonoBehaviour
             gameObject.transform.position = startPosition.position;
             GetComponent<CharacterController>().enabled = true;
 
+        }
+
+   
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("EnemyBullet"))
+        {
+            GameManager.Instance.LoseHealth(danhoEnemigo);
         }
     }
 }
