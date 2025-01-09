@@ -26,6 +26,12 @@ public class IA: MonoBehaviour
 
     void Start()
     {
+        if (destinations == null || destinations.Length == 0)
+        {
+
+            transform.gameObject.GetComponent<IA>().enabled = false;
+        }
+
         navMeshAgent.destination = destinations[0].transform.position;
 
         player = FindObjectOfType<CharacterController>().gameObject;

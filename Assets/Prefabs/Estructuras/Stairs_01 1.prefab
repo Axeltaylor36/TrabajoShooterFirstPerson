@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6934824655354479119}
   - component: {fileID: 4572627934529853213}
   - component: {fileID: 2597045993233753894}
+  - component: {fileID: 7666198485801731616}
   m_Layer: 0
   m_Name: Stairs_01 1
   m_TagString: Untagged
@@ -26,9 +27,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4849185729935593461}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.000000022351742, y: -0.7071069, z: -0.000000052154064, w: -0.70710677}
+  m_LocalRotation: {x: -0, y: -0.7071068, z: 0, w: -0.7071068}
   m_LocalPosition: {x: -201.09, y: -0.049999237, z: -6.82755}
-  m_LocalScale: {x: 2.5536008, y: 2.3590395, z: 3.4077196}
+  m_LocalScale: {x: 1.3438071, y: 1.241421, z: 1.7932789}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -83,3 +84,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &7666198485801731616
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4849185729935593461}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.67990315, y: 3.5000005, z: 0.10282234}
+  m_Center: {x: 0.000000016280074, y: 1.750004, z: 0.013804408}
