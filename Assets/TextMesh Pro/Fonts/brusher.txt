@@ -1,0 +1,69 @@
+Jack Brusher
+
+by Vít Èondák
+2015
+
+Email:	gunny(a)post.cz
+Web:	fonty.condak.cz
+FB:	facebook.com/GunnyHandwritingFont
+
+En Cz Sk De Fr Pl Gr
+
+[ English License ]
+
+Free for personal or non-commercial use.
+In case you want to use the font for a commercial project please contact me to buy a license.
+
+If you think something in this font doesn't feel right please contact me too.
+
+
+[ English Description ]
+
+A rather rough font based on a sketch I made using a brush and watercolors.
+Lower case are intentionally the same as upper case.
+
+
+[ Èeská licence ]
+
+Zdarma pro osobní a nekomerèní užití.
+V pøípadì, že chcete font použít pro komerèní úèely, je nutné mì kontaktovat a koupit si licenci.
+
+Pokud ve fontu objevíte nìco, co by bylo vhodné opravit nebo doladit, tak mì prosím kontaktujte.
+
+
+[ Èeský popis ]
+
+Hrubozrný hùlkový font podle náèrtu, který jsem udìlal štìtcem a vodovými barvami.
+Malá písmena jsou zámìrnì stejná jako velká.
+
+
+---
+History
+
+0.51	2015-10-05
+	* first public release
+	* tweaks: 9 Dcroat O
+	* margings: I J L S
+	* kerning: DA... VJ... TA...
+	* 380 kerning pairs
+
+0.50	2015-10-02
+	* tweaks: ? @| 23567 BEFHYXZ (c)
+	+ all Greek letters
+	* 459 glyphs 
+	* 242 kerning pairs
+
+0.06	2015-10-01
+	* 386 glyphs 
+	+ a few letters from Latin Extended-B
+	* tweaks: ? 02349 AEFGILNPRSVX
+
+0.05	2015-10-01
+	* 365 glyphs (Basic Latin, Supplement, Extended-A)
+	* 43 kerning pairs
+
+0.03	2015-09-30
+	+ basic character set
+
+0.00	2015-09-29
+	* brush sketch on paper
