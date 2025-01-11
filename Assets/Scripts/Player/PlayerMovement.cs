@@ -19,6 +19,12 @@ public class PlayerMovement : MonoBehaviour
     Vector3 velocity;
 
     [SerializeField] private float FuerzaSalto = 3;
+
+    public bool isSprinting;
+
+    public float sprintingSpeedMultiplier = 1.5f;
+
+    private float sprintSpeed = 1;
     void Start()
     {
         
@@ -48,8 +54,15 @@ public class PlayerMovement : MonoBehaviour
             velocity.y = Mathf.Sqrt(FuerzaSalto * -2 * gravity);  
         }
 
-        characterController.Move(move * speed * Time.deltaTime);
+        RunCheck();
 
+        CheckJump();
+
+        characterController.Move(move * speed * Time.deltaTime * sprintSpeed);
+    }
+
+    public void CheckJump()
+    {
 
     }
 
@@ -58,5 +71,23 @@ public class PlayerMovement : MonoBehaviour
         velocity.y += gravity * Time.deltaTime;
 
         characterController.Move(velocity * Time.deltaTime);
+    }
+
+    public void RunCheck()
+    {
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            isSprinting = !isSprinting;
+        }
+
+        if (isSprinting ==true) 
+        {
+            sprintSpeed = sprintingSpeedMultiplier;
+        }
+
+        else
+        {
+            sprintSpeed = 1;
+        }
     }
 }
