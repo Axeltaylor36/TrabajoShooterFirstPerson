@@ -2903,6 +2903,7 @@ MonoBehaviour:
   FuerzaSalto: 2
   isSprinting: 0
   sprintingSpeedMultiplier: 2
+  stamineUseAmount: 1.5
 --- !u!114 &239167321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26970,6 +26971,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8db28c3fbd529f844801e04ea8bc56d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  staminaSlider: {fileID: 1913250146}
+  maxStamina: 100
 --- !u!114 &1913250146
 MonoBehaviour:
   m_ObjectHideFlags: 0
