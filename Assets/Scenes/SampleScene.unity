@@ -20,7 +20,7 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0, g: 0, b: 0, a: 1}
+  m_AmbientSkyColor: {r: 0.033018872, g: 0.033018872, b: 0.033018872, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 0
@@ -33,7 +33,7 @@ RenderSettings:
   m_HaloTexture: {fileID: 0}
   m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
   m_DefaultReflectionMode: 0
-  m_DefaultReflectionResolution: 128
+  m_DefaultReflectionResolution: 256
   m_ReflectionBounces: 1
   m_ReflectionIntensity: 0
   m_CustomReflection: {fileID: 0}
@@ -2871,7 +2871,7 @@ Transform:
   m_GameObject: {fileID: 239167315}
   serializedVersion: 2
   m_LocalRotation: {x: 0.0014931635, y: -0.69279087, z: 0.00083985314, w: 0.7211367}
-  m_LocalPosition: {x: -183.429, y: 1.1600056, z: -25.35}
+  m_LocalPosition: {x: -179.08, y: 1.1600056, z: -25.35}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4475,6 +4475,7 @@ GameObject:
   - component: {fileID: 330585544}
   - component: {fileID: 330585547}
   - component: {fileID: 330585548}
+  - component: {fileID: 330585549}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -4521,7 +4522,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: 0.1
   far clip plane: 1000
   field of view: 60
   orthographic: 0
@@ -4554,6 +4555,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 584208255}
   - {fileID: 419227053}
   - {fileID: 1158212097}
   - {fileID: 142692785}
@@ -4618,6 +4620,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mouseSensitivity: 275
   playerBody: {fileID: 239167319}
+--- !u!114 &330585549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 330585543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0052fc2cc0edf3b4d9e8b73831b9e96f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weapons:
+  - {fileID: 979646561}
+  - {fileID: 584208254}
+  selectedWeapon: 0
 --- !u!1001 &331112874
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7986,6 +8004,18 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1788354024798827303, guid: 4e620491227e22947980a6bc06792433,
     type: 3}
   m_PrefabInstance: {fileID: 571521303}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &584208254 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5786097810451525583, guid: 260ff1508afea5241b6511d8fbe92201,
+    type: 3}
+  m_PrefabInstance: {fileID: 1553379544}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &584208255 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6559362985659250037, guid: 260ff1508afea5241b6511d8fbe92201,
+    type: 3}
+  m_PrefabInstance: {fileID: 1553379544}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &586266467
 GameObject:
@@ -13212,8 +13242,8 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 06c61a8e443255349ba501888901e183, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.198
-  m_Pitch: 1.74
+  m_Volume: 0.079
+  m_Pitch: 2.06
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -22012,6 +22042,74 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 26082f15f2067d242a603f0ab302e9a2, type: 3}
+--- !u!1001 &1553379544
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 330585546}
+    m_Modifications:
+    - target: {fileID: 5786097810451525583, guid: 260ff1508afea5241b6511d8fbe92201,
+        type: 3}
+      propertyPath: m_Name
+      value: Ametralladora
+      objectReference: {fileID: 0}
+    - target: {fileID: 6559362985659250037, guid: 260ff1508afea5241b6511d8fbe92201,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.44386208
+      objectReference: {fileID: 0}
+    - target: {fileID: 6559362985659250037, guid: 260ff1508afea5241b6511d8fbe92201,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.52602816
+      objectReference: {fileID: 0}
+    - target: {fileID: 6559362985659250037, guid: 260ff1508afea5241b6511d8fbe92201,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.7820599
+      objectReference: {fileID: 0}
+    - target: {fileID: 6559362985659250037, guid: 260ff1508afea5241b6511d8fbe92201,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7289737
+      objectReference: {fileID: 0}
+    - target: {fileID: 6559362985659250037, guid: 260ff1508afea5241b6511d8fbe92201,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.001502624
+      objectReference: {fileID: 0}
+    - target: {fileID: 6559362985659250037, guid: 260ff1508afea5241b6511d8fbe92201,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.68453974
+      objectReference: {fileID: 0}
+    - target: {fileID: 6559362985659250037, guid: 260ff1508afea5241b6511d8fbe92201,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.0008228071
+      objectReference: {fileID: 0}
+    - target: {fileID: 6559362985659250037, guid: 260ff1508afea5241b6511d8fbe92201,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6559362985659250037, guid: 260ff1508afea5241b6511d8fbe92201,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -1.304
+      objectReference: {fileID: 0}
+    - target: {fileID: 6559362985659250037, guid: 260ff1508afea5241b6511d8fbe92201,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 260ff1508afea5241b6511d8fbe92201, type: 3}
 --- !u!1 &1554663929
 GameObject:
   m_ObjectHideFlags: 0

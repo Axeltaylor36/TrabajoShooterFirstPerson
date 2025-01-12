@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
 
-public class Gun : MonoBehaviour
+public class WeaponLogic : MonoBehaviour
 {
     public Transform spawnPoint;
 
