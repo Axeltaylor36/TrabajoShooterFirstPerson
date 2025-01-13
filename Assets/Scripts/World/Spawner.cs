@@ -5,7 +5,7 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
 
-    [SerializeField] private GameObject enemigoCaminantePrefab;
+    [SerializeField] private GameObject[] enemiesToSpawn;
 
     //[SerializeField] private GameObject enemigoVoladorPrefab;
 
@@ -30,8 +30,15 @@ public class Spawner : MonoBehaviour
     {
         while (true) 
         {
-        
-        Instantiate(enemigoCaminantePrefab, puntosSpawn[Random.Range(0,puntosSpawn.Length)].position, Quaternion.identity);
+            float probability = Random.value; //un float de 0 a 1.
+            if(probability > 0.75f) //25%
+            {
+                Instantiate(enemiesToSpawn[1], puntosSpawn[Random.Range(0, puntosSpawn.Length)].position, Quaternion.identity);
+            }
+            else
+            {
+                Instantiate(enemiesToSpawn[0], puntosSpawn[Random.Range(0, puntosSpawn.Length)].position, Quaternion.identity);
+            }
             yield return new WaitForSeconds(5);
 
         }

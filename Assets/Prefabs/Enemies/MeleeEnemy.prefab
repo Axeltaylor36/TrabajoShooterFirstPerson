@@ -1203,6 +1203,7 @@ MonoBehaviour:
   - {fileID: 0}
   distanceToFollowPath: 2
   followPlayer: 1
+  player: {fileID: 388794309661491363, guid: 870553ea3aaaece4b92cf0ff091c583c, type: 3}
   distanceToFollowPlayer: 100
 --- !u!1 &6967828795686979549
 GameObject:

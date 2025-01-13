@@ -16,9 +16,9 @@ public class IA: MonoBehaviour
 
     [Header("---------FollowPlayer?---------")]
 
-    public bool followPlayer;
+    public bool followPlayer = true;
 
-    private GameObject player;
+    [SerializeField] private GameObject player;
 
     private float distanceToPlayer;
 
@@ -32,13 +32,13 @@ public class IA: MonoBehaviour
             transform.gameObject.GetComponent<IA>().enabled = false;
         }
 
-        navMeshAgent.destination = destinations[0].transform.position;
 
         player = FindObjectOfType<CharacterController>().gameObject;
     }
 
     void Update()
     {
+        
         distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
 
 
@@ -46,7 +46,6 @@ public class IA: MonoBehaviour
         {
             FollowPlayer();
         }
-
         else
         {
 
@@ -76,7 +75,7 @@ public class IA: MonoBehaviour
     public void FollowPlayer()
     {
 
-        navMeshAgent.destination = player.transform.position;
+        navMeshAgent.SetDestination(player.transform.position);
 
     }
 }
