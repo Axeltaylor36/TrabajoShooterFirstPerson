@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 3149597881819096187}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.806, z: 0.863}
+  m_LocalPosition: {x: 0, y: 0.806, z: 0.932}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -185,8 +185,9 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   distanceToFollowPath: 2
-  followPlayer: 0
-  distanceToFollowPlayer: 5
+  followPlayer: 1
+  player: {fileID: 388794309661491363, guid: 870553ea3aaaece4b92cf0ff091c583c, type: 3}
+  distanceToFollowPlayer: 10000000
 --- !u!114 &7972482497457489615
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -201,8 +202,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyBullet: {fileID: 5651520966266355798, guid: fd2370f52357c734cb748c5794fd0797,
     type: 3}
-  spawnBulletPoint: {fileID: 2782135142126117545}
-  bulletVelocity: 250
+  spawnBulletPoint: {fileID: 220138784681107519, guid: 870553ea3aaaece4b92cf0ff091c583c,
+    type: 3}
+  bulletVelocity: 100
 --- !u!1 &4274886853823919779
 GameObject:
   m_ObjectHideFlags: 0
