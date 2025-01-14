@@ -202,8 +202,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyBullet: {fileID: 5651520966266355798, guid: fd2370f52357c734cb748c5794fd0797,
     type: 3}
-  spawnBulletPoint: {fileID: 220138784681107519, guid: 870553ea3aaaece4b92cf0ff091c583c,
-    type: 3}
+  spawnBulletPoint: {fileID: 2782135142126117545}
   bulletVelocity: 100
 --- !u!1 &4274886853823919779
 GameObject:
@@ -753,7 +752,7 @@ GameObject:
   - component: {fileID: 6170764036897551792}
   m_Layer: 0
   m_Name: FlyingEnemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

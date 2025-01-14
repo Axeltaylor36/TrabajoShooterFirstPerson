@@ -6,7 +6,9 @@ public class PlayerInteractions : MonoBehaviour
 {
     float danhoCaida = 50;
 
-    float danhoEnemigo = 30;
+    float danhoBalaEnemigo = 30;
+
+    float danhoContactoEnemigo = 10;
 
     public Transform startPosition;
 
@@ -38,7 +40,13 @@ public class PlayerInteractions : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("EnemyBullet"))
         {
-            GameManager.Instance.LoseHealth(danhoEnemigo);
+            GameManager.Instance.LoseHealth(danhoBalaEnemigo);
+        }
+
+        else if (collision.gameObject.CompareTag("Enemy"))
+        {
+            Debug.Log("ME HACE DAÑo");
+            GameManager.Instance.LoseHealth(danhoContactoEnemigo);
         }
     }
 }
