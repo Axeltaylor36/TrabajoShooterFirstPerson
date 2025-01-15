@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
+using System;
 
 
 public class GameManager : MonoBehaviour
@@ -15,9 +16,11 @@ public class GameManager : MonoBehaviour
 
     public int gunAmmo = 10;
 
-    public float health = 100;
+    [SerializeField] private float health = 100;
 
     public TextMeshProUGUI healthText;
+
+    public event EventHandler MuerteJugador;
 
     private void Awake()
     {
@@ -40,7 +43,7 @@ public class GameManager : MonoBehaviour
 
         if (health <= 0)
         {
-
+            MuerteJugador?.Invoke(this, EventArgs.Empty);
             Debug.Log("Has muerto");
 
             //Cuando muramos reiniciamos el nivel. Entonces accedemos de neuvo a la escena que tenemos acticamente.
