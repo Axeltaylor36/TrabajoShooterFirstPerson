@@ -43,10 +43,5 @@ public class PlayerInteractions : MonoBehaviour
             GameManager.Instance.LoseHealth(danhoBalaEnemigo);
         }
 
-        else if (collision.gameObject.CompareTag("Enemy"))
-        {
-            Debug.Log("ME HACE DAÑo");
-            GameManager.Instance.LoseHealth(danhoContactoEnemigo);
-        }
     }
 }
